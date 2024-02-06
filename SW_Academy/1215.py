@@ -19,7 +19,7 @@ for tc in range(1, 11):
             for r_1 in range(K):     # (-1, -2, -3, ..., -K-1까지)
                 str_row_2.append(str_row_1[-r_1-1])
             # 글자열이 회문이라면 개수 증가
-            if str_row_1 == str_row_2:ㄴ
+            if str_row_1 == str_row_2:
                 result += 1
             # print(str_row_1)
             # print(str_row_2)
