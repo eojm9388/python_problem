@@ -13,8 +13,8 @@ for tc in range(1, T+1):
     card_A = card[:N//2]
     card_B = card[N//2:]
 
-    # 하나씩 출력
-    print(f'#{tc}', end=' ')
+    # 하나씩 출력력
+    prnt(f'#{tc}', end=' ')
     for i in range(N//2):
         print(card_A[i], card_B[i], end=' ')
 
