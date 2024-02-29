@@ -35,7 +35,7 @@ for tc in range(1, T+1):
                 # 방을 상하좌우로 이동하는게 실패했다면 거기가 마지막 방이다
                 if fail == 4:
                     break
-            
+
             # 최대 이동 횟수 갱신 -> 이때 방 번호를 기록
             if max_path_count < cnt:
                 max_path_count = cnt
