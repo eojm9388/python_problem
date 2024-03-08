@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 from collections import deque
 
 T = int(input())
 
 
+=======
+T = int(input())
+
+>>>>>>> fd0d49bfaa624d16e9524a90101f6725488afcba
 # d = 1, 2, 3, 4 [상, 하, 좌, 우] 방향
 
 # 위로 움직이기
@@ -13,8 +18,12 @@ def move_up(x, y, l, d):
     if nx >= 0 and (MAP[nx][ny] in [1, 2, 5, 6]):
         if arrival_point[nx][ny] == 0:
             arrival_point[nx][ny] = 1
+<<<<<<< HEAD
         move_point(nx, ny, l + 1, 1)
 
+=======
+        move_point(nx, ny, l+1, 1)
+>>>>>>> fd0d49bfaa624d16e9524a90101f6725488afcba
 
 # 아래로 움직이기
 def move_down(x, y, l, d):
@@ -24,7 +33,12 @@ def move_down(x, y, l, d):
     if nx < N and (MAP[nx][ny] in [1, 2, 4, 7]):
         if arrival_point[nx][ny] == 0:
             arrival_point[nx][ny] = 1
+<<<<<<< HEAD
         move_point(nx, ny, l + 1, 2)
+=======
+        move_point(nx, ny, l+1, 2)
+
+>>>>>>> fd0d49bfaa624d16e9524a90101f6725488afcba
 
 
 # 왼쪽으로 움직이기
@@ -35,7 +49,11 @@ def move_left(x, y, l, d):
     if ny >= 0 and (MAP[nx][ny] in [1, 3, 4, 5]):
         if arrival_point[nx][ny] == 0:
             arrival_point[nx][ny] = 1
+<<<<<<< HEAD
         move_point(nx, ny, l + 1, 3)
+=======
+        move_point(nx, ny, l+1, 3)
+>>>>>>> fd0d49bfaa624d16e9524a90101f6725488afcba
 
 
 # 오른쪽으로 움직이기
@@ -46,7 +64,11 @@ def move_right(x, y, l, d):
     if ny < M and (MAP[nx][ny] in [1, 3, 6, 7]):
         if arrival_point[nx][ny] == 0:
             arrival_point[nx][ny] = 1
+<<<<<<< HEAD
         move_point(nx, ny, l + 1, 4)
+=======
+        move_point(nx, ny, l+1, 4)
+>>>>>>> fd0d49bfaa624d16e9524a90101f6725488afcba
 
 
 # 통로 설정
@@ -112,7 +134,11 @@ def move_point(x, y, l, d):
             move_left(x, y, l, d)
 
 
+<<<<<<< HEAD
 for tc in range(1, T + 1):
+=======
+for tc in range(1, T+1):
+>>>>>>> fd0d49bfaa624d16e9524a90101f6725488afcba
     # 입력값 받아오기
     N, M, R, C, L = map(int, input().split())
     # 지하터널 지도
@@ -132,6 +158,10 @@ for tc in range(1, T + 1):
     for i in range(N):
         cnt += arrival_point[i].count(1)
 
+<<<<<<< HEAD
     print(f'#{tc}', cnt)
 
 
+=======
+    print(f'#{tc}', cnt)
+>>>>>>> fd0d49bfaa624d16e9524a90101f6725488afcba
