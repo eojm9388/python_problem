@@ -1,26 +1,22 @@
-def backtracking(cnt, i, b):
-    global result
+N = int(input())
 
-    if cnt >= result:       # 가지치기
-        return
+arr = [int(input()) for _ in range(N)]
 
-    if i == (n-2) and b > 0:       # 도달하면 result = cnt
-        result = cnt
-        return
+dp = [0] * N
 
-    elif b > 0 and 0 <= i < n-2:
-        backtracking(cnt+1, i+1, battery[i+1])    # 충전 할 경우
-        backtracking(cnt, i+1, b-1)  # 충전 안 할 경우
+if N <= 2:
+    print(sum(arr))
 
-    else:
-        return
+else:
+    dp[0] = arr[0]
+    dp[1] = arr[0] + arr[1]
+    dp[2] = max(arr[0], arr[1]) + arr[2]
 
-T = int(input())
-for tc in range(1, T+1):
-    print(f'#{tc}', end=' ')
-    battery = list(map(int, input().split()))
-    n = battery.pop(0)
-    result = float('inf')
+    for i in range(3, N):
+        dp[i] = dp[i-3] + arr[i-1] + arr[i]
 
-    backtracking(0, 0, battery[0])
-    print(result)
+        dp[i] = max(dp[i], dp[i-2] + arr[i])
+
+
+    print(dp[N-1])
+
